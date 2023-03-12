@@ -1,0 +1,4 @@
+<launch>
+	<node name = "JPS_Node"  pkg = "JPS" type = "Jump_Point_Search" />
+	<node name = "pointcloudTransformer"  pkg = "JPS" type = "pointcloud.py" />
+</launch>
