@@ -1,0 +1,4 @@
+<launch>
+	<node name = "JPS_Node"  pkg = "JPS" type = "JPS_Node" />
+	<rosparam file = "$(find JPS)/config/JPS_params.yaml"/>
+</launch>

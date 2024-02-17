@@ -1,0 +1,14 @@
+#Set thr size of horizon in terms of number of cells across the 3D cartesian space. Note the robot is at the centre of the horizon
+map_size: 20
+#Set occupancy grid map cell size. 
+#Note that size depends on unit of measurement when the nodelet receives information about the environment. So if nodelet receives distance to obstacles in metres, 
+#one cell will be 1x1x1 m, and so on. From there, you can set cell size to whatever floating point value you wish. Note also that lowering the cell size will reduce the horizon as well.
+#Good range of values to choose from are between 0.2 to 1.0 of the normal cell size.
+cell_size: 1.0
+#How many iterations the JPS should run before giving up on finding a path
+max_iterations: 500
+#Set padding size in terms of cell length. Useful for giving some clearance between obstacles and robot. Additionally, its a good idea to increase padding the more you decrease cell size.
+#This ensures proper clearance and also helps reduce the chance that the algorithm chooses an intermediate destination that is impossible to reach from the robot position. 
+pad_size: 0
+#Set the threshold distance, in terms of cell length, below which you deem the robot is close enough to its goal and the algorithm can stop running.
+threshold: 1.0
